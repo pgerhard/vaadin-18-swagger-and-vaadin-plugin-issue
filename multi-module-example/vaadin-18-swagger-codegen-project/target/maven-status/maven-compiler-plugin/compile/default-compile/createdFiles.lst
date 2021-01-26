@@ -1,0 +1,4 @@
+io/github/pgerhard/rest/v1/dto/ResourceContainer.class
+io/github/pgerhard/rest/v1/dto/MimeType.class
+io/github/pgerhard/rest/v1/dto/MimeType$Adapter.class
+io/github/pgerhard/rest/v1/dto/ResourceDto.class

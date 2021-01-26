@@ -1,0 +1,41 @@
+swagger: '2.0'
+info:
+  description: >-
+    Open API compliant schema definition
+  version: 2020.12 - Version 1
+  title: Missing Cyberroom REST V1 DTO
+paths:
+  /empty:
+    get:
+      description: Ignore this
+      responses:
+        200:
+          description: Ignore this
+definitions:
+  ResourceContainer:
+    title: Resources
+    description: A container for a list of resources
+    type: object
+    properties:
+      data:
+        type: array
+        description: A list of resources
+        items:
+          $ref: '#/definitions/ResourceDto'
+  ResourceDto:
+    title: Resource
+    description: A resource
+    type: object
+    properties:
+      data:
+        type: string
+        description: The Base64 encoded content of the requested resource
+      mimeType:
+        $ref: '#/definitions/MimeType'
+  MimeType:
+    type: string
+    description: The MIME type of the resource. See https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for list of common types
+    enum:
+      - text/plain
+      - image/png
+      - image/jpeg
